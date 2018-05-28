@@ -168,16 +168,16 @@ gg_Group1", "Egg_Group2", "Egg_Cycle", "Height(m)", "Weight\
 Defense", "Speed", "Total"]
     for element in title:
         f.write(element)
-        compTab = (23 - len(element)) // 4
-        for i in range(compTab):
-            f.write("\t")
+        compBlank = 20 - len(element)
+        for i in range(compBlank):
+            f.write(" ")
     f.write("\n")
     for data in dataBase:
         for element in data:
             f.write(str(element))
-            compTab = (23 - len(str(element))) // 4
-            for i in range(compTab):
-                f.write("\t")
+            compBlank = 20 - len(str(element))
+            for i in range(compBlank):
+                f.write(" ")
         f.write("\n")
     
     f.close()
